@@ -1,0 +1,29 @@
+Routings (Have to use RouterLink) - 
+1. Login
+2. Register
+3. Dashboard
+4. Profile
+5. Admin
+
+Forms I need - 
+1. Login
+2. Registration
+3. Job (Company name, position, status {rejected, interview, waiting}, date applied, priority) 
+4. Profile update
+
+DB - 
+1. Job application
+	- unique primary key, Company name, position, status, date applied, priority
+2. User
+	- unique primary key, Name, email, password(salted hash)
+
+CRUD API calls - 
+1. get api/jobs
+2. post api/jobs
+3. delete api/jobs/{id}
+4. get api/user
+5. post api/addUser
+6. delete api/user
+
+
+https://angular.dev/tutorials/learn-angular/18-forms-validation
