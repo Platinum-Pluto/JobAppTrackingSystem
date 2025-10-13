@@ -15,7 +15,7 @@ DB -
 1. Job application
 	- unique primary key, Company name, position, status, date applied, priority
 2. User
-	- unique primary key, Name, email, password(salted hash)
+	- unique primary key, Name, email, password(salted hash), country, district/state
 
 CRUD API calls - 
 1. get api/jobs

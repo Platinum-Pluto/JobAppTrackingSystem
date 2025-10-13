@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | JobTrackr</title>
+  <link rel="stylesheet" href="adminDashboard.css" />
+</head>
+<body>
+  <div class="admin-container">
+
+
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>JobTrackr Admin</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li class="active"><a href="#">📊 Dashboard</a></li>
+        <li><a href="#">👥 Manage Users</a></li>
+        <li><a href="#">📈 Analytics</a></li>
+        <li><a href="#">🚪 Logout</a></li>
+      </ul>
+    </aside>
+
+
+    <main class="main-content">
+
+
+      <header class="topbar">
+        <h1>Admin Dashboard</h1>
+        <div class="admin-info">
+          <p>Welcome, <strong>Admin</strong></p>
+        </div>
+      </header>
+
+
+      <section class="overview">
+        <div class="overview-card">
+          <h3>Total Users</h3>
+          <p>524</p>
+        </div>
+        <div class="overview-card">
+          <h3>Job Postings</h3>
+          <p>147</p>
+        </div>
+        <div class="overview-card">
+          <h3>Active Applications</h3>
+          <p>2,183</p>
+        </div>
+        <div class="overview-card">
+          <h3>Pending Reviews</h3>
+          <p>16</p>
+        </div>
+      </section>
+
+
+      <section class="analytics-section">
+        <div class="chart-card">
+          <h2>New Users (Past 6 Months)</h2>
+          <div class="bar-chart">
+            <div class="bar" style="height: 60%;"><span>May</span></div>
+            <div class="bar" style="height: 70%;"><span>Jun</span></div>
+            <div class="bar" style="height: 80%;"><span>Jul</span></div>
+            <div class="bar" style="height: 50%;"><span>Aug</span></div>
+            <div class="bar" style="height: 90%;"><span>Sep</span></div>
+            <div class="bar" style="height: 75%;"><span>Oct</span></div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <h2>Applications by Status</h2>
+          <div class="pie-chart"></div>
+          <ul class="legend">
+            <li><span class="dot applied"></span> Applied</li>
+            <li><span class="dot interview"></span> Interview</li>
+            <li><span class="dot offer"></span> Offer</li>
+            <li><span class="dot rejected"></span> Rejected</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="data-section">
+        <h2>Recent User Signups</h2>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Sign Up Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1023</td>
+              <td>Sarah Khan</td>
+              <td>sarah.khan@example.com</td>
+              <td>Oct 8, 2025</td>
+              <td><span class="status active">Active</span></td>
+            </tr>
+            <tr>
+              <td>#1024</td>
+              <td>James Carter</td>
+              <td>jcarter@example.com</td>
+              <td>Oct 9, 2025</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>#1025</td>
+              <td>Anika Chowdhury</td>
+              <td>anika.c@example.com</td>
+              <td>Oct 10, 2025</td>
+              <td><span class="status active">Active</span></td>
+            </tr>
+            <tr>
+              <td>#1026</td>
+              <td>David Wu</td>
+              <td>david.wu@example.com</td>
+              <td>Oct 11, 2025</td>
+              <td><span class="status banned">Banned</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

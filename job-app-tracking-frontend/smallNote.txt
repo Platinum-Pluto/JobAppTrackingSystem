@@ -1,0 +1,5 @@
+For the registration of the user the user will provide the username, legitimate email with verification with a number sent to the email,
+country and district/state or whatever.
+
+The country and district/state or whatever will allow the admin to see where most users are from and this will provide some insights on what
+kind of ads will be shown in their page and also provide data on people from which places are applying for specific jobs or companies as well.
