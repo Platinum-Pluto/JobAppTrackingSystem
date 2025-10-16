@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
+@Component({
+  selector: 'app-user',
+  imports: [RouterOutlet, RouterLink],
+  templateUrl: './user.component.html',
+  styleUrl: './ud.css'
+})
+export class UserComponent {
+
+}
