@@ -1,1 +1,326 @@
-<p>about works!</p>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+
+.navbar {
+  background: #1e3a8a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+}
+
+.btn-login {
+  background: #3b82f6;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  background: #2563eb;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb, #3b82f6);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #f3f4f6;
+}
+
+
+.mission-section {
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.mission-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.mission-text {
+  flex: 1 1 400px;
+}
+
+.mission-text h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.mission-text p {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.mission-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.mission-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+
+.story-section {
+  background: #f3f4f6;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.story-section h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.story-section p {
+  color: #4b5563;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+
+.team-section {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.team-card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+
+.cta-section {
+  background-color: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: #dbeafe;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background: #3b82f6;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+}
+
+
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+  .mission-container {
+    flex-direction: column;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+
+</style>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>About JobTrackr</h1>
+      <p>Empowering job seekers to organize, track, and achieve their career goals with clarity and confidence.</p>
+    </div>
+  </section>
+
+
+  <section class="mission-section">
+    <div class="mission-container">
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p>
+          At <strong>JobTrackr</strong>, we believe that finding your dream job shouldn’t be chaotic. 
+          Our mission is to simplify your job hunt by helping you track every application, 
+          analyze your performance, and stay organized from start to success.
+        </p>
+      </div>
+      <div class="mission-image">
+        <img src="https://cdn.pixabay.com/photo/2017/01/31/20/15/startup-2022484_1280.png" alt="Our Mission" />
+      </div>
+    </div>
+  </section>
+
+
+  <section class="story-section">
+    <h2>Our Story</h2>
+    <p>
+      Founded in 2023 by a team of developers and career coaches, JobTrackr was created out of frustration 
+      with messy spreadsheets and lost emails. We wanted a smarter, cleaner way to manage job applications. 
+      Today, JobTrackr serves thousands of users worldwide, helping them stay focused and land their dream jobs faster.
+    </p>
+  </section>
+
+
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/man-1281562_1280.jpg" alt="CEO">
+        <h3>Alex Carter</h3>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-card">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="CTO">
+        <h3>Riley Kim</h3>
+        <p>Chief Technology Officer</p>
+      </div>
+      <div class="team-card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/woman-1867093_1280.jpg" alt="Designer">
+        <h3>Sophia Patel</h3>
+        <p>Lead Product Designer</p>
+      </div>
+      <div class="team-card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/african-1868412_1280.jpg" alt="Marketing">
+        <h3>James Brown</h3>
+        <p>Marketing Director</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta-section">
+    <h2>Join the JobTrackr community</h2>
+    <p>Take control of your job search and stay on top of every opportunity.</p>
+    <a href="signup.html" class="cta-btn">Get Started Free</a>
+  </section>
+

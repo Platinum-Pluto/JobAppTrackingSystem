@@ -1,1 +1,281 @@
-<p>features works!</p>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+
+.navbar {
+  background: #1e3a8a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+}
+
+.btn-login {
+  background: #3b82f6;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  background: #2563eb;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb, #3b82f6);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #f3f4f6;
+}
+
+.hero-btn {
+  background: #fff;
+  color: #1e3a8a;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+
+.features-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #6b7280;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.feature-card .icon {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+
+.cta-section {
+  background-color: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: #dbeafe;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background: #3b82f6;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+}
+
+
+.footer {
+  background-color: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .features-section {
+    padding: 3rem 1rem;
+  }
+}
+
+
+</style>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>All the tools you need to manage your job search</h1>
+      <p>JobTrackr helps you organize applications, track progress, and analyze your career growth — all in one place.</p>
+      <a href="signup.html" class="hero-btn">Get Started Free</a>
+    </div>
+  </section>
+
+
+  <section class="features-section">
+    <h2 class="section-title">Powerful Features</h2>
+    <p class="section-subtitle">Everything you need to land your dream job</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">📋</div>
+        <h3>Application Tracking</h3>
+        <p>Keep track of every job you’ve applied for with organized statuses and reminders.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">📈</div>
+        <h3>Analytics Dashboard</h3>
+        <p>Visualize your progress with insights and metrics on your job applications and response rates.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">💼</div>
+        <h3>Employer Profiles</h3>
+        <p>Save your favorite employers and discover company insights before you apply.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🔔</div>
+        <h3>Smart Notifications</h3>
+        <p>Stay informed with reminders for deadlines, interviews, and new job postings.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🧠</div>
+        <h3>AI-Powered Suggestions</h3>
+        <p>Get tailored job recommendations based on your preferences and experience.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">☁️</div>
+        <h3>Cloud Sync</h3>
+        <p>Access your job tracker anywhere, anytime — securely synced across all your devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to take control of your job hunt?</h2>
+    <p>Start tracking your applications and reach your goals faster with JobTrackr.</p>
+    <a href="signup.html" class="cta-btn">Join Now — It’s Free</a>
+  </section>
+

@@ -1,3 +1,243 @@
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+
+.sidebar {
+  width: 250px;
+  background-color: #1e3a8a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  position:sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.sidebar-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-menu li {
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu li.active {
+  background-color: #2563eb;
+}
+
+.sidebar-menu span {
+  font-size: 1.2rem;
+}
+
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.search-box input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  width: 250px;
+  outline: none;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
+.overview {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.overview-card {
+  background-color: #fff;
+  flex: 1 1 200px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-4px);
+}
+
+.overview-card h3 {
+  color: #2563eb;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.overview-card p {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+
+.job-list {
+  padding: 2rem;
+}
+
+.job-list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.job-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+}
+
+.job-info h3 {
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.job-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.status {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.applied {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status.interview {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status.offer {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .overview {
+    flex-direction: column;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #fff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 3rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+</style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 <body>
   <div class="dashboard-container">
 
@@ -7,10 +247,10 @@
         <h2>JobTrackr</h2>
       </div>
       <ul class="sidebar-menu">
-        <li><a routerLink="/dashboard"><span>🏠</span> Dashboard</a></li>
-        <li><a routerLink="/job-list"><span>📋</span> My Applications</a></li>
-        <li><a routerLink="/analytics"><span>📊</span> Analytics</a></li>
-        <li><a routerLink="/profile"><span>👤</span> Profile</a></li>
+        <li><a routerLink="/user"><span>🏠</span> Dashboard</a></li>
+        <li><a routerLink="/user/job-list"><span>📋</span> My Applications</a></li>
+        <li><a routerLink="/user/analytics"><span>📊</span> Analytics</a></li>
+        <li><a routerLink="/user/profile"><span>👤</span> Profile</a></li>
         <li><a routerLink="/logout"><span>🚪</span> Logout</a></li>
       </ul>
     </aside>
@@ -28,4 +268,10 @@
           <span>John Doe</span>
         </div>
       </header>
-<router-outlet />
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+    <p>© 2025 JobTrackr. All rights reserved.</p>
+</footer>
+</main>

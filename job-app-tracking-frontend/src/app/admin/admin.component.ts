@@ -4,8 +4,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   selector: 'app-admin',
   imports: [RouterLink, RouterOutlet],
   templateUrl: './admin.component.html',
-  styleUrl: './admin.component.scss'
+//  styleUrl: './admin.component.scss'
+//styleUrl:'./admin.css'
 })
 export class AdminComponent {
-
 }

@@ -28,7 +28,6 @@ export const routes: Routes = [
             {path: 'about', title: 'About', component: AboutComponent},
             {path: 'login', title: 'Login', component: LoginComponent},
             {path: 'signup', title: 'Signup', component: SignupComponent},
-            {path: 'login', title: 'Login', component: LoginComponent},
             {path: 'logout', title: 'Logout', component: LogoutComponent}
         ]
     },
@@ -36,7 +35,7 @@ export const routes: Routes = [
         path: 'user',
         component: UserComponent,
         children:[
-            {path: 'user', title: ' Dashboard', component: DashboardComponent},
+            {path: '', title: ' Dashboard', component: DashboardComponent},
             {path: 'analytics', title: 'Analytics', component: AnalyticsComponent},
             {path: 'job-list', title: 'Jobs List', component: JobsListComponent},
             {path: 'profile', title: 'Profile', component: ProfileComponent}
@@ -46,7 +45,7 @@ export const routes: Routes = [
         path: 'admin',
         component: AdminComponent,
         children:[
-            {path: 'admin', title: ' Dashboard', component: AdminDashboardComponent},
+            {path: '', title: ' Dashboard', component: AdminDashboardComponent},
             {path: 'admin-metrics', title: ' Metrics', component: AdminMetricsComponent},
             {path: 'admin-search', title: 'Search Users', component: AdminSearchUsersComponent}
         ]

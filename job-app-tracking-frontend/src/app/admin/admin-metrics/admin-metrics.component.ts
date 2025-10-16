@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './admin-metrics.component.scss'
 })
 export class AdminMetricsComponent {
-
+ value = '';
 }

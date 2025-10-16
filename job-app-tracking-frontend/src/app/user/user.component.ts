@@ -4,7 +4,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   selector: 'app-user',
   imports: [RouterOutlet, RouterLink],
   templateUrl: './user.component.html',
-  styleUrl: './ud.css'
+ // styleUrl: './user.component.scss'
 })
 export class UserComponent {
 
