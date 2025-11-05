@@ -19,7 +19,6 @@ INSERT INTO `admin` (`admin_id`, `name`, `email`, `password`) VALUES
 (2, 'John', 'john@example.com', 'djsijdi'),
 (3, 'Jill', 'jill@example.com', 'dsdsdauj');
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `applications`
